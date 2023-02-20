@@ -72,7 +72,6 @@ def login_controller():
 			if users[request.form["user"]] == request.form["pass"]:
 				session["username"] = request.form["user"]
 				return redirect(url_for("profile", username=session["username"]))
-			else:
 				abort(401)
 
 	# if all else fails, offer to log them in
