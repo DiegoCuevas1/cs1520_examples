@@ -16,12 +16,12 @@ def abort_if_todo_doesnt_exist(todo_id):
 
 
 # RESTful access to the list of todos
-@app.route("/todos", methods=["GET"])
+@app.route("/todos/", methods=["GET"])
 def list_get():
 	# Flask automatically jsonify's dictionaries
 	return TODOS
 
-@app.route("/todos", methods=["POST"])
+@app.route("/todos/", methods=["POST"])
 def list_post():
 	# Get json request data
 	req_data = request.get_json()
